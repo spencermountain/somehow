@@ -96,17 +96,18 @@ These were built for creating graphics on [thensome.how](http://thensome.how/), 
 </div>
 
 ### somehow-calendar
+[repo](https://github.com/spencermountain/somehow-calendar)
+
 ```html
 <script>
-import { Cmp } from 'somehow-calendar'
+  import { Calendar, Day } from './src'
 </script>
-<Cmp>
-</Cmp>
+
+<Calendar start="march 1 2012" end="June 2nd 2020">
+  <Day date="march 28th" color="blue" />
+</Calendar>
 ```
 <img src="https://user-images.githubusercontent.com/399657/66760690-9b413300-ee70-11e9-8245-94f590bac34e.png"/>
-<div align="right">
-  <a href="https://github.com/spencermountain/somehow-calendar">repo</a>
-</div>
 <div align="right">
   <a href="https://spencermounta.in/somehow-calendar/">demo</a>
 </div>
