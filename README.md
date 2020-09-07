@@ -236,17 +236,24 @@ These were built for creating graphics on [thensome.how](http://thensome.how/), 
 
 
 ### somehow-sankey
+[repo](https://github.com/spencermountain/somehow-sankey)
 ```html
 <script>
-import { Cmp } from 'somehow-sankey'
+  import { Sankey, Node } from 'somehow-sankey'
 </script>
-<Cmp>
-</Cmp>
+<Sankey height="600">
+  <Col>
+    <Node name="Property Taxes" to="Toronto" value="4400" color="sea" />
+    <Node name="Province/Fed" to="Toronto" value="2500" color="red" />
+    <Node name="TTC Fares" to="Toronto" value="1300" color="sky" />
+    <Node name="Fees" to="Toronto" value="900" color="sky" />
+  </Col>
+  <Col>
+    <Node name="Toronto" value="11600" color="blue" />
+  </Col>
+</Sankey>
 ```
-<img src="https://user-images.githubusercontent.com/399657/66760690-9b413300-ee70-11e9-8245-94f590bac34e.png"/>
-<div align="right">
-  <a href="https://github.com/spencermountain/somehow-sankey">repo</a>
-</div>
+<img src="https://user-images.githubusercontent.com/399657/92411176-c54cb500-f114-11ea-87ed-8e736ecb00f2.png"/>
 <div align="right">
   <a href="https://spencermounta.in/somehow-sankey/">demo</a>
 </div>
@@ -255,46 +262,10 @@ import { Cmp } from 'somehow-sankey'
 </div>
 
 
-## WIP
-
-### somehow-horizon
-```html
-<script>
-import { Horizon } from 'somehow-horizon'
-</script>
-<Horizon>
-</Horizon>
-```
-<!-- <img src="https://user-images.githubusercontent.com/399657/66760690-9b413300-ee70-11e9-8245-94f590bac34e.png"/> -->
-<div align="right">
-  <a href="https://github.com/spencermountain/somehow-horizon">repo</a>
-</div>
-<div align="right">
-  <a href="https://spencermounta.in/somehow-horizon/">demo</a>
-</div>
-<div align="center">
-  <img height="50px" src="https://user-images.githubusercontent.com/399657/68221837-0d142480-ffb8-11e9-9d30-90669f1b897c.png"/>
-</div>
-
-
-### somehow-graph
-```html
-<script>
-import { Graph } from 'somehow-graph'
-</script>
-<Graph>
-</Graph>
-```
-<!-- <img src="https://user-images.githubusercontent.com/399657/66760690-9b413300-ee70-11e9-8245-94f590bac34e.png"/> -->
-<div align="right">
-  <a href="https://github.com/spencermountain/somehow-graph">repo</a>
-</div>
-<div align="right">
-  <a href="https://spencermounta.in/somehow-graph/">demo</a>
-</div>
-<div align="center">
-  <img height="50px" src="https://user-images.githubusercontent.com/399657/68221837-0d142480-ffb8-11e9-9d30-90669f1b897c.png"/>
-</div>
+<!-- ## WIP
+### somehow-horizon 
+### somehow-graph 
+-->
 
 <!-- ### somehow-shapes -->
 <!-- ### somehow-3d -->
