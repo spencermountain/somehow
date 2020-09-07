@@ -1,8 +1,7 @@
 <div align="center">
   <div><b>somehow</b></div>
   <img src="https://user-images.githubusercontent.com/399657/68222691-6597f180-ffb9-11e9-8a32-a7f38aa8bded.png"/>
-  <div>— part of <a href="https://github.com/spencermountain/somehow">somehow</a> —</div>
-  <div>WIP svelte infographics</div>
+  <div>Svelte infographics components</div>
   <div align="center">
     <sub>
       by
@@ -14,17 +13,18 @@
 
 
 
-a collection of Svelte components that generate some common infographics.
+a collection of Svelte components that generate infographics, in the same style.
 
 These were built for creating graphics on [thensome.how](http://thensome.how/), but may be useful to others, perhaps just for copy+pasting.
 
 **Design choices:**
 * responsive-width, whenever possible
+* automatically set scales from given data (whenver possible)
 * HTML (over SVG), whenever possible
 * re-used [color-schemes](https://spencermounta.in/spencer-color/) *from spencer-color*
 * broken into declarative Components, whenever possible
 * d3 sometimes (whenever possible)
-* suggested background color of `#fbfbfb`
+* assumed white background color (`#fbfbfb`)
 
 
 <img height="25px" src="https://user-images.githubusercontent.com/399657/68221862-17ceb980-ffb8-11e9-87d4-7b30b6488f16.png"/>
@@ -142,17 +142,22 @@ These were built for creating graphics on [thensome.how](http://thensome.how/), 
 </div>
 
 ### somehow-maps
-```html
+[repo](https://github.com/spencermountain/somehow-maps)
+```js
 <script>
-import { Cmp } from 'somehow-maps'
+  import { Globe, Line, Graticule, Dot, Latitude } from 'somehow-map'
 </script>
-<Cmp>
-</Cmp>
+
+<Globe rotate={30} tilt={-10}>
+  <Graticule />
+  <Countries stroke="grey" />
+  <Latitude at={40} />
+  <Line from="toronto" to='jamaica' />
+  <Dot at={[90, 0]} color="lightblue" radius={50} />
+</Globe>
 ```
-<img src="https://user-images.githubusercontent.com/399657/66760690-9b413300-ee70-11e9-8245-94f590bac34e.png"/>
-<div align="right">
-  <a href="https://github.com/spencermountain/somehow-maps">repo</a>
-</div>
+![image](https://user-images.githubusercontent.com/399657/92409352-494f6e80-f10e-11ea-82cf-51c8bdc8e4c0.png)
+
 <div align="right">
   <a href="https://spencermounta.in/somehow-maps/">demo</a>
 </div>
@@ -161,17 +166,20 @@ import { Cmp } from 'somehow-maps'
 </div>
 
 ### somehow-grid
+[repo](https://github.com/spencermountain/somehow-grid)
 ```html
 <script>
-import { Cmp } from 'somehow-grid'
+  import { Grid, Part } from 'somehow-grid'
 </script>
-<Cmp>
-</Cmp>
+
+<Grid total="500">
+  <Part color="red" count="100" />
+  <Part color="blue" count="100" />
+</Grid>
 ```
-<img src="https://user-images.githubusercontent.com/399657/66760690-9b413300-ee70-11e9-8245-94f590bac34e.png"/>
-<div align="right">
-  <a href="https://github.com/spencermountain/somehow-grid">repo</a>
-</div>
+
+<img src="https://user-images.githubusercontent.com/399657/92409898-30e05380-f110-11ea-965c-b8e7d4c1cb25.png"/>
+
 <div align="right">
   <a href="https://spencermounta.in/somehow-grid/">demo</a>
 </div>
@@ -243,12 +251,12 @@ import { Cmp } from 'somehow-sankey'
 ### somehow-horizon
 ```html
 <script>
-import { Cmp } from 'somehow-horizon'
+import { Horizon } from 'somehow-horizon'
 </script>
-<Cmp>
-</Cmp>
+<Horizon>
+</Horizon>
 ```
-<img src="https://user-images.githubusercontent.com/399657/66760690-9b413300-ee70-11e9-8245-94f590bac34e.png"/>
+<!-- <img src="https://user-images.githubusercontent.com/399657/66760690-9b413300-ee70-11e9-8245-94f590bac34e.png"/> -->
 <div align="right">
   <a href="https://github.com/spencermountain/somehow-horizon">repo</a>
 </div>
@@ -263,12 +271,12 @@ import { Cmp } from 'somehow-horizon'
 ### somehow-graph
 ```html
 <script>
-import { Cmp } from 'somehow-graph'
+import { Graph } from 'somehow-graph'
 </script>
-<Cmp>
-</Cmp>
+<Graph>
+</Graph>
 ```
-<img src="https://user-images.githubusercontent.com/399657/66760690-9b413300-ee70-11e9-8245-94f590bac34e.png"/>
+<!-- <img src="https://user-images.githubusercontent.com/399657/66760690-9b413300-ee70-11e9-8245-94f590bac34e.png"/> -->
 <div align="right">
   <a href="https://github.com/spencermountain/somehow-graph">repo</a>
 </div>
