@@ -1,43 +1,50 @@
 <div align="center">
   <div><b>somehow</b></div>
   <img src="https://user-images.githubusercontent.com/399657/68222691-6597f180-ffb9-11e9-8a32-a7f38aa8bded.png"/>
-  <div>svelte infographic suite</div>
+  <div>— part of <a href="https://github.com/spencermountain/somehow">somehow</a> —</div>
+  <div>WIP svelte infographics</div>
   <div align="center">
     <sub>
       by
       <a href="https://spencermounta.in/">Spencer Kelly</a> 
     </sub>
   </div>
-  <img height="25px" src="https://user-images.githubusercontent.com/399657/68221862-17ceb980-ffb8-11e9-87d4-7b30b6488f16.png"/>
 </div>
+<img height="25px" src="https://user-images.githubusercontent.com/399657/68221862-17ceb980-ffb8-11e9-87d4-7b30b6488f16.png"/>
 
 
 
-this is a collection of Svelte components that generate different types of infographics.
-
-They are built with similar design choices:
-* responsive-width (whenever possible)
-* HTML (over SVG), whenever possible
-* re-used [color-schemes](https://spencermounta.in/spencer-color/)
-* broken into Components to be maximally-declarative
-* d3 sometimes
-* suggested background color of `#fbfbfb`
+a collection of Svelte components that generate some common infographics.
 
 These were built for creating graphics on [thensome.how](http://thensome.how/), but may be useful to others, perhaps just for copy+pasting.
 
+**Design choices:**
+* responsive-width, whenever possible
+* HTML (over SVG), whenever possible
+* re-used [color-schemes](https://spencermounta.in/spencer-color/) *from spencer-color*
+* broken into declarative Components, whenever possible
+* d3 sometimes (whenever possible)
+* suggested background color of `#fbfbfb`
 
-### somehow-timeline
+
+<img height="25px" src="https://user-images.githubusercontent.com/399657/68221862-17ceb980-ffb8-11e9-87d4-7b30b6488f16.png"/>
+
+
+## somehow-timeline
+[repo](https://github.com/spencermountain/somehow-timeline)
 ```html
 <script>
-import { Cmp } from 'somehow-timeline'
+  import { Timeline, Column, Line } from 'somehow-timeline'
 </script>
-<Cmp>
-</Cmp>
+<Timeline start="Jan 1 2020" end="Dec 30 2020" height="500">
+  <Column width="75">
+    <Line start="January 1 2020" end="Feb 20 2020" color="pink" width="15px" dotted="{true}" label="Before" />
+    <Line start="Feb 20 2020" end="November 11 2020" width="15px" dotted="{true}" color="#6699cc" label="Middle" />
+    <Line start="November 11 2020" end="December 20 2020" width="15px" color="fire" label="After" />
+  </Column>
+</Timeline>
 ```
-<img src="https://user-images.githubusercontent.com/399657/66760690-9b413300-ee70-11e9-8245-94f590bac34e.png"/>
-<div align="right">
-  <a href="https://github.com/spencermountain/somehow-timeline">repo</a>
-</div>
+<img src="https://user-images.githubusercontent.com/399657/92404871-70a03e80-f102-11ea-829b-ba27fc8cff58.png"/>
 <div align="right">
   <a href="https://spencermounta.in/somehow-timeline/">demo</a>
 </div>
@@ -47,6 +54,7 @@ import { Cmp } from 'somehow-timeline'
 
 
 ### somehow-keyboard
+[repo](https://github.com/spencermountain/somehow-barchart)
 ```html
 <script>
   import { Keyboard, Key } from './src'
@@ -58,9 +66,6 @@ import { Cmp } from 'somehow-timeline'
 ```
 <img src="https://user-images.githubusercontent.com/399657/92405774-56676000-f104-11ea-8c05-0209b6e09432.png"/>
 <div align="right">
-  <a href="https://github.com/spencermountain/somehow-barchart">repo</a>
-</div>
-<div align="right">
   <a href="https://spencermounta.in/somehow-barchart/">demo</a>
 </div>
 <div align="center">
@@ -69,17 +74,20 @@ import { Cmp } from 'somehow-timeline'
 
 
 ### somehow-barchart
+[repo](https://github.com/spencermountain/somehow-barchart)
 ```html
 <script>
-import { Cmp } from 'somehow-barchart'
+  import { Horizontal, Bar } from 'somehow-barchart'
 </script>
-<Cmp>
-</Cmp>
+<Horizontal>
+  <Bar color="blue" value="19" />
+  <Bar color="red" value="5" />
+  <Bar color="green" value="10" label="green" />
+</Horizontal>
 ```
-<img src="https://user-images.githubusercontent.com/399657/66760690-9b413300-ee70-11e9-8245-94f590bac34e.png"/>
-<div align="right">
-  <a href="https://github.com/spencermountain/somehow-barchart">repo</a>
-</div>
+
+![image](https://user-images.githubusercontent.com/399657/88101585-3556aa00-cb6c-11ea-821c-c7413368889d.png)
+
 <div align="right">
   <a href="https://spencermounta.in/somehow-barchart/">demo</a>
 </div>
