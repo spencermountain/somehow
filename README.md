@@ -188,17 +188,23 @@ These were built for creating graphics on [thensome.how](http://thensome.how/), 
 </div>
 
 ### somehow-input
+[repo](https://github.com/spencermountain/somehow-input)
+
 ```html
 <script>
-import { Cmp } from 'somehow-input'
+  let number = 3
 </script>
-<Cmp>
-</Cmp>
+<Number
+  bind:number="{index}"
+  min="1"
+  max="4"
+  hasSlider="{false}"
+  hasKeyboard="{false}"
+/>
 ```
-<img src="https://user-images.githubusercontent.com/399657/66760690-9b413300-ee70-11e9-8245-94f590bac34e.png"/>
-<div align="right">
-  <a href="https://github.com/spencermountain/somehow-input">repo</a>
-</div>
+
+<img src="https://user-images.githubusercontent.com/399657/92410104-093dbb00-f111-11ea-9de4-227b86aa7a80.png"/>
+
 <div align="right">
   <a href="https://spencermounta.in/somehow-input/">demo</a>
 </div>
