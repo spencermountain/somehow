@@ -19,15 +19,36 @@ These were built for creating graphics on [thensome.how](http://thensome.how/), 
 
 **Design choices:**
 * responsive-width, whenever possible
-* automatically set scales from given data (whenver possible)
+* automatically set scales from data (whenver possible)
 * HTML (over SVG), whenever possible
 * re-used [color-schemes](https://spencermounta.in/spencer-color/) *from spencer-color*
 * broken into declarative Components, whenever possible
 * d3 sometimes (whenever possible)
 * assumed white background color (`#fbfbfb`)
+* shared rollup/npm config
 
 
 <img height="25px" src="https://user-images.githubusercontent.com/399657/68221862-17ceb980-ffb8-11e9-87d4-7b30b6488f16.png"/>
+
+
+### somehow-keyboard
+[repo](https://github.com/spencermountain/somehow-barchart)
+```html
+<script>
+  import { Keyboard, Key } from './src'
+</script>
+
+<Keyboard>
+  <Key key="8" fill="red" />
+</Keyboard>
+```
+<img src="https://user-images.githubusercontent.com/399657/92405774-56676000-f104-11ea-8c05-0209b6e09432.png"/>
+<div align="right">
+  <a href="https://spencermounta.in/somehow-barchart/">demo</a>
+</div>
+<div align="center">
+  <img height="50px" src="https://user-images.githubusercontent.com/399657/68221837-0d142480-ffb8-11e9-9d30-90669f1b897c.png"/>
+</div>
 
 
 ## somehow-timeline
@@ -47,26 +68,6 @@ These were built for creating graphics on [thensome.how](http://thensome.how/), 
 <img src="https://user-images.githubusercontent.com/399657/92404871-70a03e80-f102-11ea-829b-ba27fc8cff58.png"/>
 <div align="right">
   <a href="https://spencermounta.in/somehow-timeline/">demo</a>
-</div>
-<div align="center">
-  <img height="50px" src="https://user-images.githubusercontent.com/399657/68221837-0d142480-ffb8-11e9-9d30-90669f1b897c.png"/>
-</div>
-
-
-### somehow-keyboard
-[repo](https://github.com/spencermountain/somehow-barchart)
-```html
-<script>
-  import { Keyboard, Key } from './src'
-</script>
-
-<Keyboard>
-  <Key key="8" fill="red" />
-</Keyboard>
-```
-<img src="https://user-images.githubusercontent.com/399657/92405774-56676000-f104-11ea-8c05-0209b6e09432.png"/>
-<div align="right">
-  <a href="https://spencermounta.in/somehow-barchart/">demo</a>
 </div>
 <div align="center">
   <img height="50px" src="https://user-images.githubusercontent.com/399657/68221837-0d142480-ffb8-11e9-9d30-90669f1b897c.png"/>
@@ -213,17 +214,19 @@ These were built for creating graphics on [thensome.how](http://thensome.how/), 
 </div>
 
 ### somehow-slider
+[repo](https://github.com/spencermountain/somehow-slider)
 ```html
 <script>
-import { Cmp } from 'somehow-slider'
+  import { Vertical, Slider, Label } from './src'
 </script>
-<Cmp>
-</Cmp>
+<Vertical bind:value min="{0}" max="{200}">
+  <label start="10" end="20" color="red" label="beginning" />
+  <label start="20" end="180" color="blue" label="middle" />
+  <label start="180" end="190" color="red" label="end" />
+</Vertical>
 ```
-<img src="https://user-images.githubusercontent.com/399657/66760690-9b413300-ee70-11e9-8245-94f590bac34e.png"/>
-<div align="right">
-  <a href="https://github.com/spencermountain/somehow-slider">repo</a>
-</div>
+<img src="https://user-images.githubusercontent.com/399657/92410478-3048bc80-f112-11ea-9a90-2a8ae7613fe9.png"/>
+
 <div align="right">
   <a href="https://spencermounta.in/somehow-slider/">demo</a>
 </div>
