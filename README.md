@@ -95,6 +95,7 @@ These were built for creating graphics on [thensome.how](http://thensome.how/), 
   <img height="50px" src="https://user-images.githubusercontent.com/399657/68221837-0d142480-ffb8-11e9-9d30-90669f1b897c.png"/>
 </div>
 
+
 ### somehow-calendar
 [repo](https://github.com/spencermountain/somehow-calendar)
 
@@ -115,37 +116,24 @@ These were built for creating graphics on [thensome.how](http://thensome.how/), 
   <img height="50px" src="https://user-images.githubusercontent.com/399657/68221837-0d142480-ffb8-11e9-9d30-90669f1b897c.png"/>
 </div>
 
-### somehow-graph
-```html
-<script>
-import { Cmp } from 'somehow-graph'
-</script>
-<Cmp>
-</Cmp>
-```
-<img src="https://user-images.githubusercontent.com/399657/66760690-9b413300-ee70-11e9-8245-94f590bac34e.png"/>
-<div align="right">
-  <a href="https://github.com/spencermountain/somehow-graph">repo</a>
-</div>
-<div align="right">
-  <a href="https://spencermounta.in/somehow-graph/">demo</a>
-</div>
-<div align="center">
-  <img height="50px" src="https://user-images.githubusercontent.com/399657/68221837-0d142480-ffb8-11e9-9d30-90669f1b897c.png"/>
-</div>
 
 ### somehow-circle
+[repo](https://github.com/spencermountain/somehow-circle)
 ```html
 <script>
-import { Cmp } from 'somehow-circle'
+  import { Round, Arc, Circle, Line, Label } from 'somehow-circle'
 </script>
-<Cmp>
-</Cmp>
+
+<Round rotate="0" margin="10">
+  <Arc from="-45" to="45" color="blue" width="8" />
+  <Arc from="-10" to="-5" color="red" width="8" />
+  <Circle radius="73" />
+  <Line length="70" angle="30" />
+  <label angle="32" radius="68" text="30°" color="grey" size="8" />
+</Round>
 ```
-<img src="https://user-images.githubusercontent.com/399657/66760690-9b413300-ee70-11e9-8245-94f590bac34e.png"/>
-<div align="right">
-  <a href="https://github.com/spencermountain/somehow-circle">repo</a>
-</div>
+<img src="https://user-images.githubusercontent.com/399657/92408329-2bccd580-f10b-11ea-80f2-774d41cb5daf.png"/>
+
 <div align="right">
   <a href="https://spencermounta.in/somehow-circle/">demo</a>
 </div>
@@ -271,6 +259,25 @@ import { Cmp } from 'somehow-horizon'
   <img height="50px" src="https://user-images.githubusercontent.com/399657/68221837-0d142480-ffb8-11e9-9d30-90669f1b897c.png"/>
 </div>
 
+
+### somehow-graph
+```html
+<script>
+import { Cmp } from 'somehow-graph'
+</script>
+<Cmp>
+</Cmp>
+```
+<img src="https://user-images.githubusercontent.com/399657/66760690-9b413300-ee70-11e9-8245-94f590bac34e.png"/>
+<div align="right">
+  <a href="https://github.com/spencermountain/somehow-graph">repo</a>
+</div>
+<div align="right">
+  <a href="https://spencermounta.in/somehow-graph/">demo</a>
+</div>
+<div align="center">
+  <img height="50px" src="https://user-images.githubusercontent.com/399657/68221837-0d142480-ffb8-11e9-9d30-90669f1b897c.png"/>
+</div>
 
 <!-- ### somehow-shapes -->
 <!-- ### somehow-3d -->
