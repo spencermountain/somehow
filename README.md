@@ -56,6 +56,7 @@ These were built for creating graphics on [thensome.how](http://thensome.how/), 
   <img height="50px" src="https://user-images.githubusercontent.com/399657/68221837-0d142480-ffb8-11e9-9d30-90669f1b897c.png"/>
 </div>
 
+
 ### somehow-keyboard
 [repo](https://github.com/spencermountain/somehow-barchart)
 ```html
@@ -121,6 +122,29 @@ These were built for creating graphics on [thensome.how](http://thensome.how/), 
   <img height="50px" src="https://user-images.githubusercontent.com/399657/68221837-0d142480-ffb8-11e9-9d30-90669f1b897c.png"/>
 </div>
 
+
+### somehow-year
+[repo](https://github.com/spencermountain/somehow-year)
+
+```html
+<script>
+  import { Year, Day } from './src'
+</script>
+
+<Year date="2020">
+  <Day date="march 28th" color="blue" />
+</Year>
+<Year date="2021">
+  <Day date="march 28th" color="blue" />
+</Year>
+```
+<img src="https://user-images.githubusercontent.com/399657/93625275-acaf8b00-f9af-11ea-993d-685100e17c3d.png"/>
+<div align="right">
+  <a href="https://spencermounta.in/somehow-year/">demo</a>
+</div>
+<div align="center">
+  <img height="50px" src="https://user-images.githubusercontent.com/399657/68221837-0d142480-ffb8-11e9-9d30-90669f1b897c.png"/>
+</div>
 
 
 ### somehow-circle
