@@ -13,23 +13,48 @@
 
 
 
-a collection of Svelte components that generate infographics, in the same style.
+a collection of Svelte components that generate infographics, in a similar style.
 
 These were built for creating graphics on [thensome.how](http://thensome.how/), but may be useful to others, perhaps just for copy+pasting.
 
-**Design choices:**
-* responsive-width, whenever possible
-* automatically set scales from data (whenver possible)
-* HTML (over SVG), whenever possible
-* re-used [color-schemes](https://spencermounta.in/spencer-color/) *from spencer-color*
-* broken into declarative Components, whenever possible
-* d3 sometimes (whenever possible)
-* assumed white background color (`#fbfbfb`)
-* shared rollup/npm config
+
+**Responsive:**
+  * automatically set scales from data (when possible)
+  * full-width of parent
+  * vertically + horizontally centered
+  
+**Shared look**
+  * HTML over SVG, whenever possible
+  * re-used [color-schemes](https://spencermounta.in/spencer-color/) *from spencer-color*
+
+**Same setup**
+  * broken into declarative Components, whenever possible
+  * d3 sometimes (whenever possible)
+  * shared rollup/npm config
 
 
 <img height="25px" src="https://user-images.githubusercontent.com/399657/68221862-17ceb980-ffb8-11e9-87d4-7b30b6488f16.png"/>
 
+
+### somehow-calendar
+[repo](https://github.com/spencermountain/somehow-calendar)
+
+```html
+<script>
+  import { Month, Day } from './src'
+</script>
+
+<Month date="march 2012">
+  <Day date="march 28th" color="blue" />
+</Calendar>
+```
+<img src="https://user-images.githubusercontent.com/399657/93616238-7b7c8e00-f9a2-11ea-8fa3-c385a1a8f735.png"/>
+<div align="right">
+  <a href="https://spencermounta.in/somehow-calendar/">demo</a>
+</div>
+<div align="center">
+  <img height="50px" src="https://user-images.githubusercontent.com/399657/68221837-0d142480-ffb8-11e9-9d30-90669f1b897c.png"/>
+</div>
 
 ### somehow-keyboard
 [repo](https://github.com/spencermountain/somehow-barchart)
@@ -96,26 +121,6 @@ These were built for creating graphics on [thensome.how](http://thensome.how/), 
   <img height="50px" src="https://user-images.githubusercontent.com/399657/68221837-0d142480-ffb8-11e9-9d30-90669f1b897c.png"/>
 </div>
 
-
-### somehow-calendar
-[repo](https://github.com/spencermountain/somehow-calendar)
-
-```html
-<script>
-  import { Calendar, Day } from './src'
-</script>
-
-<Calendar start="march 1 2012" end="June 2nd 2020">
-  <Day date="march 28th" color="blue" />
-</Calendar>
-```
-<img src="https://user-images.githubusercontent.com/399657/66760690-9b413300-ee70-11e9-8245-94f590bac34e.png"/>
-<div align="right">
-  <a href="https://spencermounta.in/somehow-calendar/">demo</a>
-</div>
-<div align="center">
-  <img height="50px" src="https://user-images.githubusercontent.com/399657/68221837-0d142480-ffb8-11e9-9d30-90669f1b897c.png"/>
-</div>
 
 
 ### somehow-circle
